@@ -1,0 +1,1 @@
+import t from"./IconText-DF_yCx5V.js";import{d as e,o,f as n}from"./app-BJS3HRcf.js";const r=e({name:"IconTextMeasurement"}),p=e({...r,setup(a){return(c,s)=>(o(),n(t,{text:"тыс. м³",width:50,height:20}))}});export{p as default};

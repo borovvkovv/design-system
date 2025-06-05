@@ -1,0 +1,1 @@
+import{r as a,t as s}from"./index-CoNwWjZd.js";function n(r){a(1,arguments);var t=s(r);return t.setHours(0,0,0,0),t}function o(r){a(1,arguments);var t=s(r);return t.setDate(1),t.setHours(0,0,0,0),t}export{n as a,o as s};

@@ -1,0 +1,1 @@
+import{d as t,o,c as s,b as r}from"./app-BJS3HRcf.js";const c=["width","height"],n=r("circle",{cx:"3.99988",cy:"4",r:"2",fill:"currentColor"},null,-1),i=[n],_=t({__name:"IconMarker",props:{size:{type:Number,required:!1,default:8}},setup(e){return(a,l)=>(o(),s("svg",{width:e.size,height:e.size,viewBox:"0 0 8 8",fill:"none",xmlns:"http://www.w3.org/2000/svg"},i,8,c))}});export{_};

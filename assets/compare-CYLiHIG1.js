@@ -1,0 +1,1 @@
+var o=(s=>(s.Asc="Asc",s.Desc="Desc",s))(o||{});const n=(s,e,c="Asc")=>s>e?c==="Asc"?1:-1:s<e?c==="Asc"?-1:1:0,u=(s,e="Asc")=>(c,r)=>n(c[s],r[s],e),A=(s,e="Asc")=>(c,r)=>{const t=c[s],a=r[s];return n(t.toUpperCase(),a.toUpperCase(),e)};function i(s,e){const c=Object.keys(s),r=Object.keys(e);return c.length===r.length&&c.every(t=>s[t]===e[t])}export{o as S,A as a,u as c,i};
