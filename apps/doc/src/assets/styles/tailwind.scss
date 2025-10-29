@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+  @import 'text-sizes';
+}
+
+@layer components {
+}
+
+@layer utilities {
+}
+
+@layer variants {
+  @import 'text-headers';
+}

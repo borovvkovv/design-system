@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.options.json",
+  "include": ["env.d.ts", "./src/**/*", "./index.ts", "./reg.ts"],
+  "exclude": ["./src/**/*.spec.ts"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "paths": {
+      "@comp/*": ["./src/*"]
+    },
+    "types": ["node"],
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo"
+  }
+}

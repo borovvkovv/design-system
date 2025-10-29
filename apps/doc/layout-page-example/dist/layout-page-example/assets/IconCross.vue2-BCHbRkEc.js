@@ -1,0 +1,1 @@
+import o from"./IconCross20.vue2-Ds5NJZKB.js";import n from"./IconCross24.vue2-B7ceLG47.js";import{d as t,g as s,o as i}from"./reg-DS6Lzyw4.js";const l=t({__name:"IconCross",props:{size:{default:20}},setup(e){return(a,r)=>e.size<=20?(i(),s(o,{key:0,size:e.size},null,8,["size"])):(i(),s(n,{key:1,size:e.size},null,8,["size"]))}});export{l as default};

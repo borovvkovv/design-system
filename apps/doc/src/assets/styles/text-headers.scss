@@ -1,0 +1,29 @@
+h1 {
+  margin: 0;
+  @apply text-mobile-h1 md:text-tablet-h1 lg:text-desktop-h1;
+}
+
+h2 {
+  margin: 0;
+  @apply text-mobile-h2 md:text-tablet-h2 lg:text-desktop-h2;
+}
+
+h3 {
+  margin: 0;
+  @apply text-mobile-h3 md:text-tablet-h3 lg:text-desktop-h3;
+}
+
+h4 {
+  margin: 0;
+  @apply text-mobile-h4 md:text-tablet-h4 lg:text-desktop-h4;
+}
+
+h5 {
+  margin: 0;
+  @apply text-mobile-h5 md:text-tablet-h5 lg:text-desktop-h5;
+
+  &.uppercase {
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}

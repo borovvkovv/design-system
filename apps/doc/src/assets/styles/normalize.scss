@@ -1,0 +1,28 @@
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  outline: 0 !important;
+}
+
+::-moz-focus-outer,
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+svg {
+  vertical-align: top;
+}

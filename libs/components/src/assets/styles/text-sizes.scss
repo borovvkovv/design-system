@@ -1,0 +1,60 @@
+.text-size-1 {
+  @apply text-mobile-1 md:text-tablet-1 lg:text-desktop-1;
+}
+
+.text-size-2 {
+  @apply text-mobile-2 md:text-tablet-2 lg:text-desktop-2;
+}
+
+.text-size-3 {
+  @apply text-mobile-3 md:text-tablet-3 lg:text-desktop-3;
+}
+
+.text-size-4 {
+  @apply text-mobile-4 md:text-tablet-4 lg:text-desktop-4;
+}
+
+.text-size-5 {
+  @apply text-mobile-5 md:text-tablet-5 lg:text-desktop-5;
+}
+
+.text-size-6 {
+  @apply text-mobile-6 md:text-tablet-6 lg:text-desktop-6;
+}
+
+.text-size-7 {
+  @apply text-mobile-7 md:text-tablet-7 lg:text-desktop-7;
+}
+
+.text-size-h1 {
+  @apply text-mobile-h1 md:text-tablet-h1 lg:text-desktop-h1;
+}
+
+.text-size-h2 {
+  @apply text-mobile-h2 md:text-tablet-h2 lg:text-desktop-h2;
+}
+
+.text-size-h3 {
+  @apply text-mobile-h3 md:text-tablet-h3 lg:text-desktop-h3;
+}
+
+.text-size-h4 {
+  @apply text-mobile-h4 md:text-tablet-h4 lg:text-desktop-h4;
+}
+
+.text-size-h5 {
+  @apply text-mobile-h5 md:text-tablet-h5 lg:text-desktop-h5;
+
+  &.uppercase {
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}
+
+.text-size-h6 {
+  @apply text-mobile-h6 md:text-tablet-h6 lg:text-desktop-h6;
+}
+
+.text-size-h7 {
+  @apply text-mobile-h7 md:text-tablet-h7 lg:text-desktop-h7;
+}

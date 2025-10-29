@@ -1,0 +1,1 @@
+export const SIDE_BAR_ANIMATION_DURATION_MS = 400;

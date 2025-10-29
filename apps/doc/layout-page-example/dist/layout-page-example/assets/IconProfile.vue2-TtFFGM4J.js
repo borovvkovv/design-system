@@ -1,0 +1,1 @@
+import o from"./IconProfile20.vue2-C0robM07.js";import n from"./IconProfile24.vue2-DFpaKcnj.js";import{d as t,g as i,o as s}from"./reg-DS6Lzyw4.js";const l=t({__name:"IconProfile",props:{size:{default:20}},setup(e){return(a,r)=>e.size<=20?(s(),i(o,{key:0,size:e.size},null,8,["size"])):(s(),i(n,{key:1,size:e.size},null,8,["size"]))}});export{l as default};

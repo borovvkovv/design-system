@@ -1,0 +1,201 @@
+{
+  "name": "@libs/components",
+  "version": "1.0.0",
+  "private": true,
+  "files": [
+    "dist",
+    "src"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./style.css": "./dist/style.css",
+    "./reg": {
+      "import": "./dist/reg.mjs",
+      "require": "./dist/reg.js",
+      "types": "./dist/reg.d.ts"
+    },
+    "./app-link": {
+      "import": "./dist/src/components/app-link/index.mjs",
+      "require": "./dist/src/components/app-link/index.js",
+      "types": "./dist/src/components/app-link/index.d.ts"
+    },
+    "./app-link-types": {
+      "import": "./dist/src/components/app-link/models.mjs",
+      "require": "./dist/src/components/app-link/models.js",
+      "types": "./dist/src/components/app-link/models.d.ts"
+    },
+    "./app-link-enums": {
+      "import": "./dist/src/components/app-link/enums.mjs",
+      "require": "./dist/src/components/app-link/enums.js",
+      "types": "./dist/src/components/app-link/enums.d.ts"
+    },
+    "./buttons": {
+      "import": "./dist/src/components/buttons/index.mjs",
+      "require": "./dist/src/components/buttons/index.js",
+      "types": "./dist/src/components/buttons/index.d.ts"
+    },
+    "./buttons-types": {
+      "import": "./dist/src/components/buttons/models.mjs",
+      "require": "./dist/src/components/buttons/models.js",
+      "types": "./dist/src/components/buttons/models.d.ts"
+    },
+    "./buttons-enums": {
+      "import": "./dist/src/components/buttons/enums.mjs",
+      "require": "./dist/src/components/buttons/enums.js",
+      "types": "./dist/src/components/buttons/enums.d.ts"
+    },
+    "./calendars": {
+      "import": "./dist/src/components/calendars/index.mjs",
+      "require": "./dist/src/components/calendars/index.js",
+      "types": "./dist/src/components/calendars/index.d.ts"
+    },
+    "./calendars-types": {
+      "import": "./dist/src/components/calendars/models.mjs",
+      "require": "./dist/src/components/calendars/models.js",
+      "types": "./dist/src/components/calendars/models.d.ts"
+    },
+    "./calendars-enums": {
+      "import": "./dist/src/components/calendars/enums.mjs",
+      "require": "./dist/src/components/calendars/enums.js",
+      "types": "./dist/src/components/calendars/enums.d.ts"
+    },
+    "./icons": {
+      "import": "./dist/src/components/icons/index.mjs",
+      "require": "./dist/src/components/icons/index.js",
+      "types": "./dist/src/components/icons/index.d.ts"
+    },
+    "./icons-types": {
+      "import": "./dist/src/components/icons/models.mjs",
+      "require": "./dist/src/components/icons/models.js",
+      "types": "./dist/src/components/icons/models.d.ts"
+    },
+    "./icons-enums": {
+      "import": "./dist/src/components/icons/enums.mjs",
+      "require": "./dist/src/components/icons/enums.js",
+      "types": "./dist/src/components/icons/enums.d.ts"
+    },
+    "./inputs": {
+      "import": "./dist/src/components/inputs/index.mjs",
+      "require": "./dist/src/components/inputs/index.js",
+      "types": "./dist/src/components/inputs/index.d.ts"
+    },
+    "./inputs-types": {
+      "import": "./dist/src/components/inputs/models.mjs",
+      "require": "./dist/src/components/inputs/models.js",
+      "types": "./dist/src/components/inputs/models.d.ts"
+    },
+    "./inputs-enums": {
+      "import": "./dist/src/components/inputs/enums.mjs",
+      "require": "./dist/src/components/inputs/enums.js",
+      "types": "./dist/src/components/inputs/enums.d.ts"
+    },
+    "./modals": {
+      "import": "./dist/src/components/modals/index.mjs",
+      "require": "./dist/src/components/modals/index.js",
+      "types": "./dist/src/components/modals/index.d.ts"
+    },
+    "./modals-types": {
+      "import": "./dist/src/components/modals/models.mjs",
+      "require": "./dist/src/components/modals/models.js",
+      "types": "./dist/src/components/modals/models.d.ts"
+    },
+    "./popup": {
+      "import": "./dist/src/components/popup/index.mjs",
+      "require": "./dist/src/components/popup/index.js",
+      "types": "./dist/src/components/popup/index.d.ts"
+    },
+    "./popup-types": {
+      "import": "./dist/src/components/popup/models.mjs",
+      "require": "./dist/src/components/popup/models.js",
+      "types": "./dist/src/components/popup/models.d.ts"
+    },
+    "./selects": {
+      "import": "./dist/src/components/selects/index.mjs",
+      "require": "./dist/src/components/selects/index.js",
+      "types": "./dist/src/components/selects/index.d.ts"
+    },
+    "./selects-types": {
+      "import": "./dist/src/components/selects/models.mjs",
+      "require": "./dist/src/components/selects/models.js",
+      "types": "./dist/src/components/selects/models.d.ts"
+    },
+    "./table": {
+      "import": "./dist/src/components/table/index.mjs",
+      "require": "./dist/src/components/table/index.js",
+      "types": "./dist/src/components/table/index.d.ts"
+    },
+    "./table-types": {
+      "import": "./dist/src/components/table/models.mjs",
+      "require": "./dist/src/components/table/models.js",
+      "types": "./dist/src/components/table/models.d.ts"
+    },
+    "./enums": {
+      "import": "./dist/src/enums/index.mjs",
+      "require": "./dist/src/enums/index.js",
+      "types": "./dist/src/enums/index.d.ts"
+    },
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build:production": "run-p restore-packages type-check build-only:production",
+    "build:development": "run-p restore-packages type-check build-only:development",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "test:unit-coverege": "vitest run --coverage",
+    "restore-packages": "yarn install",
+    "build-only:production": "vite build",
+    "build-only:development": "vite build --mode development",
+    "type-check": "vue-tsc --build --force --verbose"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.22",
+    "@tanstack/vue-query": "^5.36.1",
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
+    "chart.js": "^4.4.2",
+    "date-fns": "^2.30.0",
+    "tailwind-merge": "^2.3.0",
+    "vue": "^3.4.27",
+    "vue-chartjs": "^5.3.1",
+    "vue-i18n": "11",
+    "vue-imask": "^7.6.0",
+    "vue-router": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^21.1.6",
+    "@types/node": "^20.12.12",
+    "@types/string-hash": "^1.1.3",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitest/coverage-v8": "^1.6.0",
+    "@vue/test-utils": "^2.4.6",
+    "autoprefixer": "^10.4.19",
+    "cypress": "^14.3.2",
+    "jsdom": "^24.0.0",
+    "lodash.debounce": "^4.0.8",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.38",
+    "sass": "^1.77.2",
+    "string-hash": "^1.1.3",
+    "tailwind-scrollbar": "^3.1.0",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^1.6.0",
+    "vitest-canvas-mock": "^0.3.3",
+    "vue-tsc": "^2.0.19"
+  },
+  "resolutions": {
+    "string-width": "4.2.3"
+  },
+  "peerDependencies": {
+    "vue": ">=3"
+  }
+}

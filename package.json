@@ -1,0 +1,28 @@
+{
+  "name": "lkpp-components",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "app": "yarn workspace @apps/doc",
+    "lib": "yarn workspace @libs/components",
+    "lint-app": "eslint ./apps/doc/src --ext .vue,.js,.jsx,.ts,.tsx",
+    "lint-lib": "eslint ./libs/components/src --ext .vue,.js,.jsx,.ts,.tsx",
+    "format-app": "prettier --write  ./apps/doc/src",
+    "format-lib": "prettier --write  ./libs/components/src"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-vue": "^9.26.0",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "@vue/compiler-dom": "^3.4.27",
+    "@vue/tsconfig": "^0.5.1"
+  },
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ]
+}

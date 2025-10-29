@@ -1,0 +1,13 @@
+$break_744: 744px;
+$break_1140: 1140px;
+$break_1360: 1360px;
+$break_1520: 1520px;
+
+$breaks: ($break_744, $break_1140, $break_1360, $break_1520);
+
+:export {
+  break_744: $break_744;
+  break_1140: $break_1140;
+  break_1360: $break_1360;
+  break_1520: $break_1520;
+}

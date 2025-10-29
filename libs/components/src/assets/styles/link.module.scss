@@ -1,0 +1,85 @@
+@use 'colors.module.scss' as *;
+
+@mixin link($style) {
+  text-decoration: none;
+  color: $black1;
+  font-weight: 400;
+
+  @include hover-color($grey1);
+  @include disabled-color($grey2);
+
+  &__active {
+    color: $blue2;
+  }
+
+  @if $style == 1 {
+    @apply text-size-h3;
+  } @else if $style == 2 {
+    @apply text-size-5;
+  } @else if $style == 3 {
+    @apply text-size-4;
+  } @else if $style == 4 {
+    @apply text-size-6;
+  } @else if $style == 5 {
+    color: $blue2;
+    @apply text-size-h2;
+    @include hover-color($black1);
+  } @else if $style == 6 {
+    color: $grey2;
+    @apply text-size-5;
+    @include hover-color($black1);
+    @include disabled-color($grey1);
+    @include visited-color($grey2);
+  } @else if $style == 7 {
+    color: $blue2;
+    @apply text-size-4;
+    @include hover-color($black1);
+    @include disabled-color($grey1);
+    @include visited-color($grey2);
+  } @else if $style == 8 {
+    color: $white;
+    @apply text-size-4;
+    @include hover-color($grey4);
+    @include disabled-color($grey2);
+    @include visited-color($grey3);
+  } @else if $style == 9 {
+    color: $blueGrey2;
+    @include hover-color($blueGrey1);
+    @include disabled-color($grey1);
+  } @else if $style == 10 {
+    color: $black1;
+    @apply text-size-6;
+    @include hover-color($blue2);
+    @include disabled-color($grey3);
+  }
+}
+
+@mixin hover-color($hoverColor) {
+  @media (hover: hover) {
+    &:hover {
+      color: $hoverColor;
+    }
+  }
+  @media (hover: none) {
+    &:active {
+      color: $hoverColor;
+    }
+  }
+}
+
+@mixin disabled-color($disabledColor) {
+  &__disabled {
+    color: $disabledColor;
+    pointer-events: none;
+
+    &:hover {
+      color: $disabledColor;
+    }
+  }
+}
+
+@mixin visited-color($visitedColor) {
+  &:visited {
+    color: $visitedColor;
+  }
+}

@@ -1,0 +1,50 @@
+@use 'sass:math';
+@use 'sass:map';
+@use 'layout.module' as layout;
+@use 'breaks.module' as breaks;
+
+$modifierCount: 12;
+
+@function getColumnCount($columnModifier, $columnTotal) {
+  $modifiersInColumn: math.div($modifierCount, $columnTotal);
+  $base: ($columnModifier - 1) % $modifiersInColumn;
+  $columnCount: math.div(($columnModifier - 1 - $base), $modifiersInColumn) + 1;
+  @return $columnCount;
+}
+
+@mixin create_col($columnModifier, $columnTotal, $gutter, $prefix) {
+  $columnCount: getColumnCount($columnModifier, $columnTotal);
+
+  .col#{$prefix}-#{$columnModifier} {
+    @include layout.row_item($columnCount, $columnTotal, $gutter);
+  }
+}
+
+@mixin create_layout($columnTotal, $gutter) {
+  .row {
+    @include layout.row($gutter);
+  }
+
+  @for $i from 1 to $modifierCount + 1 {
+    @include create_col($i, $columnTotal, $gutter, '');
+  }
+}
+
+@mixin create_modal_layout($columnTotal, $gutter) {
+  .row-m {
+    @include layout.row($gutter);
+  }
+
+  @for $i from 1 to $modifierCount + 1 {
+    @include create_col($i, $columnTotal, $gutter, '-m');
+  }
+}
+
+@include create_layout(1, 0px);
+
+@each $break in breaks.$breaks {
+  @media (min-width: $break) {
+    @include create_layout(map.get(layout.$columns, $break), layout.get-gutter($break, true));
+    @include create_modal_layout(map.get(layout.$columns, $break), layout.get-gutter($break, false));
+  }
+}

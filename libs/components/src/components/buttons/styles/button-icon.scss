@@ -1,0 +1,12 @@
+.icon {
+  min-width: 22px;
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &_xs {
+    min-width: 18px;
+    min-height: 18px;
+  }
+}

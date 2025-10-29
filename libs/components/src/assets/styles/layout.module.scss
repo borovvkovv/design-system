@@ -1,0 +1,43 @@
+@use 'sass:map';
+@use 'breaks.module' as breaks;
+
+$widthForBreak1360: 84px;
+$columns: (
+  breaks.$break_744: 2,
+  breaks.$break_1140: 12,
+  breaks.$break_1360: 12,
+  breaks.$break_1520: 12,
+);
+
+@function get-gutter($break, $flexBreak1360: true, $columnTotal: map.get($columns, $break)) {
+  $constGutters: (
+    breaks.$break_744: 24px,
+    breaks.$break_1140: 24px,
+    breaks.$break_1360: 28px,
+    breaks.$break_1520: 40px,
+  );
+
+  @if ($break == breaks.$break_1360 and $flexBreak1360) {
+    @return calc(100% - $columnTotal * $widthForBreak1360) / $columnTotal;
+  } @else {
+    @return map.get($constGutters, $break);
+  }
+}
+
+@mixin row($gutter) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * ($gutter) / 2);
+  margin-right: calc(-1 * ($gutter) / 2);
+}
+
+@mixin row_item($columnCount, $columnTotal, $gutter) {
+  width: calc(#{100% * $columnCount} / #{$columnTotal} - #{$gutter});
+  margin-left: calc($gutter / 2);
+  margin-right: calc($gutter / 2);
+  box-sizing: border-box;
+}
+
+@mixin row_item_by_break($columnCount, $break) {
+  @include row_item($columnCount, map.get($columns, $break), get-gutter($break));
+}
