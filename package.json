@@ -1,6 +1,9 @@
 {
   "name": "lkpp-components",
+  "author": "borovvkovv",
+  "license": "MIT",
   "version": "1.0.0",
+  "description": "Demonstration of the components from natural gas industrial customer personal account of Gazprom Mezhregiongas",
   "private": true,
   "scripts": {
     "app": "yarn workspace @apps/doc",

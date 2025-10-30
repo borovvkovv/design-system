@@ -63,7 +63,7 @@ const i18n = createI18n({
     },
     en: {
       mainPage:
-        "This is the demonstration of the components from natural gas'es industrial customer personal account of “Газпром Межрегионгаз”",
+        'This is the demonstration of the components from natural gas industrial customer personal account of Gazprom Mezhregiongas',
       router: {
         page: {
           main: 'Home',
