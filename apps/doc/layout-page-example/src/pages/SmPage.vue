@@ -22,8 +22,7 @@ const rowLayoutColumnsRef = ref<InstanceType<typeof RowLayoutColumns>>();
 const bodyResizeObserver = new ResizeObserver(() => {
   layoutContainerMargin.value = getLayoutContainerMargin(getWindowWidth(), layoutContainer.value?.$el);
 });
-console.log(import.meta.url);
-const test = import.meta.url;
+
 onMounted(() => {
   bodyResizeObserver.observe(document.body);
 });

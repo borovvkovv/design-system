@@ -9,7 +9,7 @@ export default ({ mode }: { mode: string }) => {
 
   return defineConfig({
     publicDir: 'layout-page-example/dist',
-    base: '/design-system/',
+    base: process.env.VITE_PUBLIC_PATH,
     plugins: [vue()],
     resolve: {
       alias: {

@@ -13,7 +13,6 @@ export default ({ mode }: { mode: string }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
   return defineConfig({
-    base: '',
     root: resolve(__dirname, '.'),
     plugins: [
       vue(),
@@ -139,13 +138,16 @@ export default ({ mode }: { mode: string }) => {
     },
     css: {
       postcss: {
-        plugins: [require('tailwindcss'), require('autoprefixer'),
+        plugins: [
+          require('tailwindcss'),
+          require('autoprefixer'),
           require('./plugins/postcss-tailwindcss-ts-classnames')({
             dest: 'src/types/cssClasses.d.ts',
             // Set isModule if you want to import ClassNames from another file
             isModule: true,
             exportAsDefault: true, // to use in combination with isModule
-          }),],
+          }),
+        ],
       },
     },
   });
