@@ -23,10 +23,12 @@ describe('Компонент PopupInsideContainer', () => {
     Object.defineProperty(document.documentElement, 'clientWidth', {
       value: 1000,
       writable: false,
+      configurable: true,
     });
     Object.defineProperty(document.documentElement, 'clientHeight', {
       value: 1000,
       writable: false,
+      configurable: true,
     });
   });
 
