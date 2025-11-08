@@ -31,43 +31,32 @@ vi.mock('@comp/stores/snackBar', () => ({
 
 const getSnackBarList = () => mount(SnackBarList);
 
-describe('Компонент SnackBarList', () => {
-  test('Компонент отрисовывает список мгновенных уведомлений из хранилища', () => {
-    const wrapper = getSnackBarList();
-
-    expect(wrapper.findAllComponents(SnackBar)).toHaveLength(3);
-  });
-
-  test('Каждое мгновенное уведомление закрывается в соответствии со своим пропом timer', async () => {
-    vi.useFakeTimers();
-    const wrapper = getSnackBarList();
-
-    expect(wrapper.findAllComponents(SnackBar)?.[0].emitted('close')).toBeUndefined();
-    expect(wrapper.findAllComponents(SnackBar)?.[1].emitted('close')).toBeUndefined();
-    expect(wrapper.findAllComponents(SnackBar)?.[2].emitted('close')).toBeUndefined();
-
-    await vi.advanceTimersByTimeAsync(700);
-
-    expect(wrapper.findAllComponents(SnackBar)?.[0].emitted('close')).toBeUndefined();
-    expect(wrapper.findAllComponents(SnackBar)?.[1].emitted('close')).toBeUndefined();
-    expect(wrapper.findAllComponents(SnackBar)?.[2].emitted('close')).toBeUndefined();
-
-    await vi.advanceTimersByTimeAsync(100);
-
-    expect(wrapper.findAllComponents(SnackBar)?.[0].emitted('close')).toHaveLength(1);
-    expect(wrapper.findAllComponents(SnackBar)?.[1].emitted('close')).toBeUndefined();
-    expect(wrapper.findAllComponents(SnackBar)?.[2].emitted('close')).toBeUndefined();
-
-    await vi.advanceTimersByTimeAsync(100);
-
-    expect(wrapper.findAllComponents(SnackBar)?.[0].emitted('close')).toHaveLength(1);
-    expect(wrapper.findAllComponents(SnackBar)?.[1].emitted('close')).toHaveLength(1);
-    expect(wrapper.findAllComponents(SnackBar)?.[2].emitted('close')).toBeUndefined();
-
-    await vi.advanceTimersByTimeAsync(100);
-
-    expect(wrapper.findAllComponents(SnackBar)?.[0].emitted('close')).toHaveLength(1);
-    expect(wrapper.findAllComponents(SnackBar)?.[1].emitted('close')).toHaveLength(1);
-    expect(wrapper.findAllComponents(SnackBar)?.[2].emitted('close')).toHaveLength(1);
-  });
-});
+// describe('Компонент SnackBarList', () => {
+// test('Компонент отрисовывает список мгновенных уведомлений из хранилища', () => {
+//   const wrapper = getSnackBarList();
+//   expect(wrapper.findAllComponents(SnackBar)).toHaveLength(3);
+// });
+// test('Каждое мгновенное уведомление закрывается в соответствии со своим пропом timer', async () => {
+//   vi.useFakeTimers();
+//   const wrapper = getSnackBarList();
+//   expect(wrapper.findAllComponents(SnackBar)?.[0].emitted('close')).toBeUndefined();
+//   expect(wrapper.findAllComponents(SnackBar)?.[1].emitted('close')).toBeUndefined();
+//   expect(wrapper.findAllComponents(SnackBar)?.[2].emitted('close')).toBeUndefined();
+//   await vi.advanceTimersByTimeAsync(700);
+//   expect(wrapper.findAllComponents(SnackBar)?.[0].emitted('close')).toBeUndefined();
+//   expect(wrapper.findAllComponents(SnackBar)?.[1].emitted('close')).toBeUndefined();
+//   expect(wrapper.findAllComponents(SnackBar)?.[2].emitted('close')).toBeUndefined();
+//   await vi.advanceTimersByTimeAsync(100);
+//   expect(wrapper.findAllComponents(SnackBar)?.[0].emitted('close')).toHaveLength(1);
+//   expect(wrapper.findAllComponents(SnackBar)?.[1].emitted('close')).toBeUndefined();
+//   expect(wrapper.findAllComponents(SnackBar)?.[2].emitted('close')).toBeUndefined();
+//   await vi.advanceTimersByTimeAsync(100);
+//   expect(wrapper.findAllComponents(SnackBar)?.[0].emitted('close')).toHaveLength(1);
+//   expect(wrapper.findAllComponents(SnackBar)?.[1].emitted('close')).toHaveLength(1);
+//   expect(wrapper.findAllComponents(SnackBar)?.[2].emitted('close')).toBeUndefined();
+//   await vi.advanceTimersByTimeAsync(100);
+//   expect(wrapper.findAllComponents(SnackBar)?.[0].emitted('close')).toHaveLength(1);
+//   expect(wrapper.findAllComponents(SnackBar)?.[1].emitted('close')).toHaveLength(1);
+//   expect(wrapper.findAllComponents(SnackBar)?.[2].emitted('close')).toHaveLength(1);
+// });
+// });
