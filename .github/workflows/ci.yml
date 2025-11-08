@@ -28,21 +28,30 @@ jobs:
       - name: Build application
         run: yarn app build-only:production
 
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: yarn install
+
       - name: Run component library tests
         run: yarn lib test:unit
-
-      - name: Check library types
-        run: yarn lib type-check
-
-      - name: Check application types
-        run: yarn app type-check
 
   lint-and-typecheck:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -61,8 +70,11 @@ jobs:
       - name: Library type check
         run: yarn lib type-check
 
+      - name: Build library
+        run: yarn lib build-only:production
+
       - name: Application type check
-        run: yarn app type-Check
+        run: yarn app type-check
 
   push_to_registry:
     name: Push Docker image to Docker Hub
