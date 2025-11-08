@@ -1,0 +1,5 @@
+node_modules
+apps/doc/node_modules
+apps/doc/dist
+libs/components/node_modules
+libs/components/dist
