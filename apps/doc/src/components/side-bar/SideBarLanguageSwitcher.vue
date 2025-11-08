@@ -45,7 +45,7 @@ const language = computed<string>({
 });
 
 const languageSwitcher: Switcher<string> = {
-  left: { text: 'Русский', value: 'ru' },
-  right: { text: 'English', value: 'en' },
+  left: { text: 'Русский', value: 'RU' },
+  right: { text: 'English', value: 'EN' },
 };
 </script>

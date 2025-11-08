@@ -29,6 +29,7 @@
     <AppIcon
       :icon="link.icon ?? IconName.IconNone"
       :class="['pointer-events-none absolute top-2.5 text-white', isCollapsed ? 'left-1/2 -translate-x-1/2' : 'left-3']"
+      :size="20"
     />
   </div>
 </template>

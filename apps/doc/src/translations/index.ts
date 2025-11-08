@@ -3,10 +3,10 @@ import { createI18n } from 'vue-i18n';
 const i18n = createI18n({
   legacy: false,
   globalInjection: true,
-  locale: 'ru',
-  fallbackLocale: 'ru',
+  locale: 'RU',
+  fallbackLocale: 'RU',
   messages: {
-    ru: {
+    RU: {
       mainPage:
         'Демонстрация компонент, разработанных для Личного кабинета промышленного потребителя природного газа Группы компаний ООО “Газпром Межрегионгаз”',
       router: {
@@ -61,7 +61,7 @@ const i18n = createI18n({
         },
       },
     },
-    en: {
+    EN: {
       mainPage:
         'This is the demonstration of the components from natural gas industrial customer personal account of Gazprom Mezhregiongas',
       router: {
