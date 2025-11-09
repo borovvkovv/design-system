@@ -43,7 +43,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Run component library tests
+      - name: Test library
         run: yarn lib test:unit
 
   lint-and-typecheck:
@@ -76,14 +76,18 @@ jobs:
       - name: Application type check
         run: yarn app type-check
 
-  push_to_registry:
-    name: Push Docker image to Docker Hub
+  push_to_registry_prod:
+    name: Push Docker image prod
 
     runs-on: ubuntu-latest
 
     needs: [build, tests, lint-and-typecheck]
 
     if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+
+    environment:
+      name: DockerHub_Prod
+      url: https://hub.docker.com
 
     steps:
       - name: Check out the repo
@@ -95,7 +99,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Extract metadata (tags, labels) for Docker
+      - name: Extract metadata for Docker
         id: meta
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
@@ -111,10 +115,15 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
-  server_update:
-    needs: push_to_registry
-    name: Update server buy ssh
+  server_update_prod:
+    needs: push_to_registry_prod
+    name: Run prod docker container
     runs-on: ubuntu-latest
+
+    environment:
+      name: Production
+      url: http://gasconsumer-ui.ru
+
     steps:
       - name: Connect and run script
         uses: appleboy/ssh-action@master
@@ -124,4 +133,63 @@ jobs:
           username: ${{ secrets.SERVER_USER_LOGIN }}
           password: ${{ secrets.SERVER_USER_PASSWORD }}
           script_stop: true
-          script: bash deploy.sh
+          script: bash deploy_prod.sh
+
+  push_to_registry_dev:
+    name: Push Docker image dev
+
+    runs-on: ubuntu-latest
+
+    needs: [build, tests, lint-and-typecheck]
+
+    if: github.ref == 'refs/heads/dev' && github.event_name == 'push'
+
+    environment:
+      name: DockerHub_Dev
+      url: https://hub.docker.com
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Extract metadata for Docker
+        id: meta
+        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
+        with:
+          images: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO_NAME }}
+          tags: latest
+          labels: latest
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  server_update_dev:
+    needs: push_to_registry_dev
+    name: Run dev docker container
+    runs-on: ubuntu-latest
+
+    environment:
+      name: Development
+      url: http://gasconsumer-ui.ru:8080
+
+    steps:
+      - name: Connect and run script
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          port: ${{ secrets.SERVER_PORT }}
+          username: ${{ secrets.SERVER_USER_LOGIN }}
+          password: ${{ secrets.SERVER_USER_PASSWORD }}
+          script_stop: true
+          script: bash deploy_dev.sh
