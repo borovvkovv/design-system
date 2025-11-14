@@ -3,24 +3,24 @@
 Данный монорепозиторий содержит
 
 - **библиотеку компонентов**, разработанных в рамках проекта ["Личный кабинет промышленного потребителя природного газа Группы компаний ООО “Газпром Межрегионгаз”"](https://gasconsumer.ru).
-- [**демонстрацию**](http://gasconsumer-ui.ru) возможностей и состояний компонент.
+- [**демонстрацию**](https://gasconsumer-ui.ru) возможностей и состояний компонент.
 
 # Что содержит библиотека компонентов
 
-- [Разметка](http://gasconsumer-ui.ru/layout)
-- [Кнопки](http://gasconsumer-ui.ru/text-button)
-- [Чек-боксы](http://gasconsumer-ui.ru/checkbox)
-- [Выбор дат(-ы)](http://gasconsumer-ui.ru/calendar-dropdown)
+- [Разметка](https://gasconsumer-ui.ru/layout)
+- [Кнопки](https://gasconsumer-ui.ru/text-button)
+- [Чек-боксы](https://gasconsumer-ui.ru/checkbox)
+- [Выбор дат(-ы)](https://gasconsumer-ui.ru/calendar-dropdown)
 - Стилизованные графики
 - Drag and drop
 - Адаптированное меню
 - Хинты
-- [Иконки](http://gasconsumer-ui.ru/icons)
-- [Поля ввода](http://gasconsumer-ui.ru/base-input)
+- [Иконки](https://gasconsumer-ui.ru/icons)
+- [Поля ввода](https://gasconsumer-ui.ru/base-input)
 - Модальные окна
 - Попапы
 - Таблицы
-- [Выбор из выпадающего списка](http://gasconsumer-ui.ru/simple-select)
+- [Выбор из выпадающего списка](https://gasconsumer-ui.ru/simple-select)
 - Лоадеры
 - Всплывающие сообщения
 

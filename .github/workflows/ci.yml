@@ -122,7 +122,7 @@ jobs:
 
     environment:
       name: Production
-      url: http://gasconsumer-ui.ru
+      url: https://gasconsumer-ui.ru
 
     steps:
       - name: Connect and run script
@@ -181,7 +181,7 @@ jobs:
 
     environment:
       name: Development
-      url: http://gasconsumer-ui.ru:8080
+      url: https://gasconsumer-ui.ru:8080
 
     steps:
       - name: Connect and run script
